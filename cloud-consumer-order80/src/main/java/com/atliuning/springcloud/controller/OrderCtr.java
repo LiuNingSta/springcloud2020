@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @Api(tags = "共有接口")
 public class OrderCtr {
 
-    private static final String PAYMENT_URL="http://localhost:8001";
+    private static final String PAYMENT_URL="http://CLOUD-PROVIDER-SERVICE";
 
     @Autowired
     private RestTemplate restTemplate;
