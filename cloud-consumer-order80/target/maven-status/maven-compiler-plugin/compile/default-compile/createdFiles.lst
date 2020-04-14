@@ -1,0 +1,5 @@
+com\atliuning\springcloud\entities\CommonResult.class
+com\atliuning\springcloud\config\ApplicationContextConfig.class
+com\atliuning\springcloud\entities\Payment.class
+com\atliuning\springcloud\OrderMain80.class
+com\atliuning\springcloud\controller\OrderCtr.class
