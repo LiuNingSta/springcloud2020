@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -38,6 +39,11 @@ public class PaymentController {
     }
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Payment payment = paymentService.getPaymentById(id);
         if (payment != null) {
             return new CommonResult(200, "查询成功;port:"+port, payment);
@@ -57,5 +63,10 @@ public class PaymentController {
             log.info(instance.getInstanceId()+"\t"+instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
         return services;
+    }
+
+    @GetMapping(value = "payment/lb")
+    public Object lb(){
+        return port;
     }
 }

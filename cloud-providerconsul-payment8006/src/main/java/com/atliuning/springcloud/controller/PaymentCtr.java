@@ -16,9 +16,9 @@ import java.util.UUID;
 @RestController
 @Slf4j
 public class PaymentCtr {
+
     @Value("${server.port}")
     private String serverPort;
-
 
     @RequestMapping(value = "/payment/consul")
     public String paymentConsul(){
