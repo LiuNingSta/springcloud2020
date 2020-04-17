@@ -9,28 +9,21 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-hystrix-payment8007</artifactId>
+    <artifactId>cloud-config-client3355</artifactId>
 
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+            <version>2.2.2.RELEASE</version>
         </dependency>
 
-        <!--eureka client-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-
-        <!--引入自己定义的api通用包，可以使用payment支付Entity-->
-        <dependency>
-            <groupId>com.atliuning.springcloud</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!--boot web actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
